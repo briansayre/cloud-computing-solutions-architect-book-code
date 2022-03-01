@@ -116,6 +116,7 @@ def home_page():
     response = table.scan(FilterExpression=Attr('UserId').eq(str(current_user_id)))
     items = response['Items']
     print(items)
+    print("USERID: " + current_user_id)
     return render_template('home.html', photos=items)
 
 
