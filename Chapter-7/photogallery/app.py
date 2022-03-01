@@ -101,7 +101,7 @@ def login():
     )
     items = response['Items']
     response_password = items[0]['password']
-    if (password == response_password)
+    if (password == response_password):
         current_user_id = items[0]['UserId']
     return render_template('home.html')
 
@@ -173,13 +173,13 @@ def view_photo(photoID):
         FilterExpression=Attr('PhotoID').eq(str(photoID) & Attr('UserId').eq(str(current_user_id))
     )
 
-    items = response['Items']
-    print(items[0])
-    tags=items[0]['Tags'].split(',')
-    exifdata=json.loads(items[0]['ExifData'])
+    items2 = response['Items']
+    print(items2[0])
+    tags=items2[0]['Tags'].split(',')
+    exifdata=json.loads(items2[0]['ExifData'])
 
     return render_template('photodetail.html', 
-            photo=items[0], tags=tags, exifdata=exifdata)
+            photo=items2[0], tags=tags, exifdata=exifdata)
 
 @app.route('/search', methods=['GET'])
 def search_page():
