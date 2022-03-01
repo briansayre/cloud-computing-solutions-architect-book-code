@@ -7,7 +7,7 @@
 	@include size(25px);
     @include font($size: 0);
     color: $color-white;
-    background: transparent url('../../assets/img/widgets/loading.gif') top left no-repeat;
+    background: transparent url('../../static/img/widgets/loading.gif') top left no-repeat;
     border: none;
 }
 

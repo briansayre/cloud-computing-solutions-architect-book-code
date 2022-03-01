@@ -2759,7 +2759,7 @@ h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:foc
 .breadcrumbs-v3 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/10.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/10.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   overflow: hidden;
@@ -2834,7 +2834,7 @@ h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:foc
   position: relative;
   z-index: 1;
   text-align: center;
-  background: url(../../assets/img/1920x1080/07.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/07.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 170px 0 100px;
@@ -2904,7 +2904,7 @@ h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:foc
 .breadcrumbs-v5 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/48.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/48.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 20%;
   padding: 170px 0 100px;
@@ -2922,25 +2922,25 @@ h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:foc
 }
 
 .breadcrumbs-v5.breadcrumbs-v5-bg-img-v2 {
-  background: url(../../assets/img/1920x1080/31.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/31.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .breadcrumbs-v5.breadcrumbs-v5-bg-img-v3 {
-  background: url(../../assets/img/1920x1080/17.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/17.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 100%;
 }
 
 .breadcrumbs-v5.breadcrumbs-v5-bg-img-v4 {
-  background: url(../../assets/img/1920x1080/22.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/22.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .breadcrumbs-v5.breadcrumbs-v5-bg-img-v5 {
-  background: url(../../assets/img/1920x1080/29.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/29.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -2950,13 +2950,13 @@ h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:foc
 }
 
 .breadcrumbs-v5.breadcrumbs-v5-bg-img-v6 {
-  background: url(../../assets/img/1920x1080/52.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/52.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 20%;
 }
 
 .breadcrumbs-v5.breadcrumbs-v5-bg-img-v7 {
-  background: url(../../assets/img/1920x1080/34.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/34.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -10587,7 +10587,7 @@ fieldset[disabled] .btn-ig-bg {
 .call-to-action-v1 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/10.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/10.jpg) no-repeat;
   background-size: cover;
   background-position: center top;
 }
@@ -10729,7 +10729,7 @@ fieldset[disabled] .btn-ig-bg {
   position: relative;
   z-index: 1;
   text-align: center;
-  background: url(../../assets/img/1920x1080/22.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/22.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -11976,7 +11976,7 @@ fieldset[disabled] .btn-ig-bg {
 .i-banner-v3 {
   position: relative;
   min-height: 600px;
-  background: url(../../assets/img/1920x1080/01.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/01.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -12023,7 +12023,7 @@ fieldset[disabled] .btn-ig-bg {
   opacity: 0.8;
 }
 .newsletter-v1 {
-  background: url(../../assets/img/1920x1080/19.jpg);
+  background: url(../../static/img/1920x1080/19.jpg);
   background-size: cover;
   background-position: 50% 10%;
 }
@@ -12187,14 +12187,14 @@ fieldset[disabled] .btn-ig-bg {
   }
 }
 .banner-img-v1 {
-  background: url(../../assets/img/1920x1080/17.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/17.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .banner-img-v2 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/40.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/40.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 0;
 }
@@ -12212,7 +12212,7 @@ fieldset[disabled] .btn-ig-bg {
 .banner-img-v3 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/04.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/04.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 0;
 }
@@ -12230,7 +12230,7 @@ fieldset[disabled] .btn-ig-bg {
 .banner-img-v4 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/12.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/12.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 0;
 }
@@ -12246,39 +12246,39 @@ fieldset[disabled] .btn-ig-bg {
   content: " ";
 }
 .banner-img-v5 {
-  background: url(../../assets/img/1920x1080/17.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/17.jpg) no-repeat;
   background-size: cover;
   background-position: center top;
 }
 .banner-img-v6 {
-  background: url(../../assets/img/1920x1080/42.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/42.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .banner-img-v7 {
-  background: url(../../assets/img/1920x1080/46.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/46.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .banner-img-v8 {
-  background: url(../../assets/img/1920x1080/56.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/56.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .banner-img-v9 {
-  background: url(../../assets/img/1920x1080/57.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/57.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .banner-img-v10 {
-  background: url(../../assets/img/1920x1080/58.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/58.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .banner-img-v11 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/40.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/40.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -12651,15 +12651,15 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .process-v1.img-one {
-  background: url(../../assets/img/500x500/11.jpg) no-repeat center center;
+  background: url(../../static/img/500x500/11.jpg) no-repeat center center;
 }
 
 .process-v1.img-two {
-  background: url(../../assets/img/500x500/12.jpg) no-repeat center center;
+  background: url(../../static/img/500x500/12.jpg) no-repeat center center;
 }
 
 .process-v1.img-three {
-  background: url(../../assets/img/500x500/13.jpg) no-repeat center center;
+  background: url(../../static/img/500x500/13.jpg) no-repeat center center;
 }
 
 .process-v1 .process-v1-link {
@@ -12733,15 +12733,15 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .process-v1 .process-v1-front.img-one {
-  background: url(../../assets/img/500x500/11.jpg) no-repeat center center;
+  background: url(../../static/img/500x500/11.jpg) no-repeat center center;
 }
 
 .process-v1 .process-v1-front.img-two {
-  background: url(../../assets/img/500x500/12.jpg) no-repeat center center;
+  background: url(../../static/img/500x500/12.jpg) no-repeat center center;
 }
 
 .process-v1 .process-v1-front.img-three {
-  background: url(../../assets/img/500x500/13.jpg) no-repeat center center;
+  background: url(../../static/img/500x500/13.jpg) no-repeat center center;
 }
 
 .process-v1 .process-v1-back {
@@ -13089,7 +13089,7 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .promo-block-v5.promo-block-v5-bg-img-v2 {
-  background: url(../../assets/img/1920x1080/04.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/04.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -13413,7 +13413,7 @@ fieldset[disabled] .btn-ig-bg {
   }
 }
 .promo-block-v10 {
-  background: url(../../assets/img/1920x1080/32.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/32.jpg) no-repeat;
   background-size: cover;
   background-position: center top;
 }
@@ -13737,19 +13737,19 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .services-v2.services-v2-step-one {
-  background: url(../../assets/img/970x647/32.jpg) no-repeat;
+  background: url(../../static/img/970x647/32.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v2.services-v2-step-two {
-  background: url(../../assets/img/970x647/33.jpg) no-repeat;
+  background: url(../../static/img/970x647/33.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v2.services-v2-step-three {
-  background: url(../../assets/img/970x647/34.jpg) no-repeat;
+  background: url(../../static/img/970x647/34.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -13893,7 +13893,7 @@ fieldset[disabled] .btn-ig-bg {
 .services-v3.services-v3-color-one {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/970x647/60.jpg) no-repeat;
+  background: url(../../static/img/970x647/60.jpg) no-repeat;
   background-size: cover;
   background-position: center top;
 }
@@ -13912,7 +13912,7 @@ fieldset[disabled] .btn-ig-bg {
 .services-v3.services-v3-color-two {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/970x647/22.jpg) no-repeat;
+  background: url(../../static/img/970x647/22.jpg) no-repeat;
   background-size: cover;
   background-position: center top;
 }
@@ -13931,7 +13931,7 @@ fieldset[disabled] .btn-ig-bg {
 .services-v3.services-v3-color-three {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/970x970/27.jpg) no-repeat;
+  background: url(../../static/img/970x970/27.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -13950,7 +13950,7 @@ fieldset[disabled] .btn-ig-bg {
 .services-v3.services-v3-color-four {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/970x647/48.jpg) no-repeat;
+  background: url(../../static/img/970x647/48.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -13969,7 +13969,7 @@ fieldset[disabled] .btn-ig-bg {
 .services-v3.services-v3-color-five {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/970x647/44.jpg) no-repeat;
+  background: url(../../static/img/970x647/44.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -14220,25 +14220,25 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .services-v6.services-v6-bg-img-one {
-  background: url(../../assets/img/970x970/10.jpg) no-repeat;
+  background: url(../../static/img/970x970/10.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v6.services-v6-bg-img-two {
-  background: url(../../assets/img/970x970/12.jpg) no-repeat;
+  background: url(../../static/img/970x970/12.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v6.services-v6-bg-img-three {
-  background: url(../../assets/img/970x970/09.jpg) no-repeat;
+  background: url(../../static/img/970x970/09.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v6.services-v6-bg-img-four {
-  background: url(../../assets/img/970x970/13.jpg) no-repeat;
+  background: url(../../static/img/970x970/13.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -14304,19 +14304,19 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .services-v7.services-v7-img-one {
-  background: url(../../assets/img/970x970/19.jpg) no-repeat;
+  background: url(../../static/img/970x970/19.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v7.services-v7-img-two {
-  background: url(../../assets/img/970x970/21.jpg) no-repeat;
+  background: url(../../static/img/970x970/21.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v7.services-v7-img-three {
-  background: url(../../assets/img/970x970/23.jpg) no-repeat;
+  background: url(../../static/img/970x970/23.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -14396,19 +14396,19 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .services-v7:hover.services-v7-img-one {
-  background: url(../../assets/img/970x970/20.jpg) no-repeat;
+  background: url(../../static/img/970x970/20.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v7:hover.services-v7-img-two {
-  background: url(../../assets/img/970x970/22.jpg) no-repeat;
+  background: url(../../static/img/970x970/22.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .services-v7:hover.services-v7-img-three {
-  background: url(../../assets/img/970x970/24.jpg) no-repeat;
+  background: url(../../static/img/970x970/24.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -15306,7 +15306,7 @@ fieldset[disabled] .btn-ig-bg {
 .testimonials-v7 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/08.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/08.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 0%;
 }
@@ -16309,7 +16309,7 @@ fieldset[disabled] .btn-ig-bg {
 .footer-v7 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/15.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/15.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -16405,7 +16405,7 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .footer-v8 .footer-v8-contact-info-bg {
-  background: url(../../assets/img/widgets/world-map.png) no-repeat;
+  background: url(../../static/img/widgets/world-map.png) no-repeat;
   background-size: 100%;
   background-position: center center;
   min-height: 220px;
@@ -23709,7 +23709,7 @@ fieldset[disabled] .btn-ig-bg {
 }
 .coming-soon {
   text-align: center;
-  background: url(../../assets/img/1920x1080/30.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/30.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -23772,7 +23772,7 @@ fieldset[disabled] .btn-ig-bg {
   position: relative;
   z-index: 1;
   text-align: center;
-  background: url(../../assets/img/1920x1080/28.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/28.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 250px 0 100px;
@@ -23871,7 +23871,7 @@ fieldset[disabled] .btn-ig-bg {
   position: relative;
   z-index: 1;
   text-align: center;
-  background: url(../../assets/img/1920x1080/03.jpg) no-repeat;
+  background: url(../../static/img/1920x1080/03.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 220px 0 130px;
@@ -26612,7 +26612,7 @@ fieldset[disabled] .btn-ig-bg {
 }
 
 .boxed-layout-overlay-img {
-  background: url(../../assets/img/500x500/17.jpg) repeat;
+  background: url(../../static/img/500x500/17.jpg) repeat;
 }
 
 .boxed-layout {

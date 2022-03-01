@@ -12,7 +12,7 @@ var RevSlider = function() {
             } else {
                 revapi1 = tpj("#rev-slider1").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -92,7 +92,7 @@ var RevSlider = function() {
             } else {
                 revapi2 = tpj("#rev-slider2").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 10000,
@@ -163,7 +163,7 @@ var RevSlider = function() {
             } else {
                 revapi3 = tpj("#rev-slider3").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "auto",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -208,7 +208,7 @@ var RevSlider = function() {
             } else {
                 revapi4 = tpj("#rev-slider4").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -276,7 +276,7 @@ var RevSlider = function() {
             } else {
                 revapi5 = tpj("#rev-slider5").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -337,7 +337,7 @@ var RevSlider = function() {
             } else {
                 revapi6 = tpj("#rev-slider6").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -407,7 +407,7 @@ var RevSlider = function() {
             }else{
                 revapi7 = tpj("#rev-slider7").show().revolution({
                     sliderType: "hero",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -448,7 +448,7 @@ var RevSlider = function() {
             }else{
                 revapi8 = tpj("#rev-slider8").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -508,7 +508,7 @@ var RevSlider = function() {
             } else {
                 revapi9 = tpj("#rev-slider9").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -580,7 +580,7 @@ var RevSlider = function() {
             }else{
                 revap10 = tpj("#rev-slider10").show().revolution({
                     sliderType: "standard",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
@@ -691,7 +691,7 @@ var RevSlider = function() {
             } else {
                 revapi11 = tpj("#rev-slider11").show().revolution({
                     sliderType: "hero",
-                    jsFileLocation: "assets/plugins/rev-slider/js/",
+                    jsFileLocation: "static/plugins/rev-slider/js/",
                     sliderLayout: "fullscreen",
                     dottedOverlay: "none",
                     delay: 9000,
