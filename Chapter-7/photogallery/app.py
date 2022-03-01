@@ -96,18 +96,6 @@ def s3uploading(filename, filenameWithPath):
 def index():
     return render_template('index.html')
 
-@app.route('/login', methods=['GET'])
-def login():
-    username = request.form['username']
-    password = request.form['password']
-    response = usertable.scan(
-        FilterExpression=Attr('username').eq(str(username))
-    )
-    items = response['Items']
-    response_password = items[0]['password']
-    if (password == response_password):
-        current_user_id = items[0]['UserId']
-    return render_template('home.html')
 
 @app.route('/signup', methods=['POST'])
 def signup():
@@ -129,6 +117,21 @@ def home_page():
     items = response['Items']
     print(items)
     return render_template('home.html', photos=items)
+
+
+@app.route('/login', methods=['GET'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    print("u: " + username + "p: " + password)
+    response = usertable.scan(
+        FilterExpression=Attr('username').eq(str(username))
+    )
+    items = response['Items']
+    response_password = items[0]['password']
+    if (password == response_password):
+        current_user_id = items[0]['UserId']
+    return home_page()
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_photo():
