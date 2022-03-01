@@ -151,8 +151,7 @@ def add_photo():
                                         filename)
             print filenameWithPath
             file.save(filenameWithPath)
-            uploadedFileURL = s3uploading(filename, 
-                                        filenameWithPath);
+            uploadedFileURL = s3uploading(filename, filenameWithPath)
             ExifData=getExifData(filenameWithPath)
             ts=time.time()
             timestamp = datetime.datetime.\
