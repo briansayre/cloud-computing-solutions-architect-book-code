@@ -131,8 +131,8 @@ def login():
     response_password = items[0]['password']
     if (password == response_password):
         current_user_id = items[0]['UserId']
-        return redirect(url_for('idex'))
-    return redirect(url_for('home_page'))
+        return redirect(url_for('home_page'))
+    return redirect(url_for('index'))
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_photo():
