@@ -33,20 +33,24 @@ from boto3.dynamodb.conditions import Key, Attr
 import exifread
 import json
 
-app = Flask(__name__, static_url_path="")
+app = Flask(__name__)
+
+current_user_id = -1
 
 UPLOAD_FOLDER = os.path.join(app.root_path,'media')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
-AWS_ACCESS_KEY="<enter>"
-AWS_SECRET_KEY="<enter>+0vqOmhI3ObEtIvQ+jmAkh/"
+AWS_ACCESS_KEY="AKIA2TPIYF2FBOX6X4VA"
+AWS_SECRET_KEY="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"
 REGION="us-east-1"
-BUCKET_NAME="<enter>"
+BUCKET_NAME="photo-gallery-bucket-gt"
 
 dynamodb = boto3.resource('dynamodb', aws_access_key_id=AWS_ACCESS_KEY,
                             aws_secret_access_key=AWS_SECRET_KEY,
                             region_name=REGION)
 
 table = dynamodb.Table('PhotoGallery')
+
+usertable = dynamodb.Table('PhotoGalleryUsers')
 
 
 def allowed_file(filename):
@@ -84,19 +88,42 @@ def s3uploading(filename, filenameWithPath):
     path_filename = "photos/" + filename
     print path_filename
     s3.upload_file(filenameWithPath, bucket, path_filename)  
-    s3.put_object_acl(ACL='public-read', 
-                Bucket=bucket, Key=path_filename)
+    # s3.put_object_acl(ACL='public-read', Bucket=bucket, Key=path_filename)
     return "http://"+BUCKET_NAME+\
         ".s3-website-us-east-1.amazonaws.com/"+ path_filename  
 
-@app.route('/', methods=['GET', 'POST'])
-def home_page():
-    response = table.scan()
+@app.route('/login', methods=['GET'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    response = usertable.scan(
+        FilterExpression=Attr('username').eq(str(username))
+    )
+    items = response['Items']
+    response_password = items[0]['password']
+    if (password == response_password)
+        current_user_id = items[0]['UserId']
+    return render_template('home.html')
 
+@app.route('/signup', methods=['POST'])
+def signup():
+    username = request.form['username']
+    password = request.form['password']
+    usertable.put_item(
+            Item={
+                    "UserId": str(int(ts*1000)),
+                    "username": username,
+                    "password": password
+                }
+            )
+    return render_template('index.html')
+
+@app.route('/home', methods=['GET', 'POST'])
+def home_page():
+    response = table.scan(FilterExpression=Attr('UserId').eq(str(current_user_id)))
     items = response['Items']
     print(items)
-
-    return render_template('index.html', photos=items)
+    return render_template('home.html', photos=items)
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_photo():
@@ -131,7 +158,8 @@ def add_photo():
                     "Description": description,
                     "Tags": tags,
                     "URL": uploadedFileURL,
-                    "ExifData": json.dumps(ExifData)
+                    "ExifData": json.dumps(ExifData),
+                    "UserID": str(current_user_id)
                 }
             )
 
@@ -142,7 +170,7 @@ def add_photo():
 @app.route('/<int:photoID>', methods=['GET'])
 def view_photo(photoID):
     response = table.scan(
-        FilterExpression=Attr('PhotoID').eq(str(photoID))
+        FilterExpression=Attr('PhotoID').eq(str(photoID) & Attr('UserId').eq(str(current_user_id))
     )
 
     items = response['Items']
@@ -160,7 +188,8 @@ def search_page():
     response = table.scan(
         FilterExpression=Attr('Title').contains(str(query)) | 
                         Attr('Description').contains(str(query)) | 
-                        Attr('Tags').contains(str(query))
+                        Attr('Tags').contains(str(query) & 
+                        Attr('UserId').eq(str(current_user_id))
     )
     items = response['Items']
     return render_template('search.html', 
