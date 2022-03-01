@@ -91,6 +91,7 @@ def s3uploading(filename, filenameWithPath):
     # s3.put_object_acl(ACL='public-read', Bucket=bucket, Key=path_filename)
     return "http://"+BUCKET_NAME+\
         ".s3-website-us-east-1.amazonaws.com/"+ path_filename  
+
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
