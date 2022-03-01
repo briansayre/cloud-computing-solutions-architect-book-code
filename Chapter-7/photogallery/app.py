@@ -170,16 +170,15 @@ def add_photo():
 @app.route('/<int:photoID>', methods=['GET'])
 def view_photo(photoID):
     response = table.scan(
-        FilterExpression=Attr('PhotoID').eq(str(photoID) & Attr('UserId').eq(str(current_user_id))
+        FilterExpression=Attr('PhotoID').eq(str(photoID)) & Attr('UserId').eq(str(current_user_id))
     )
-
-    items2 = response['Items']
-    print(items2[0])
-    tags=items2[0]['Tags'].split(',')
-    exifdata=json.loads(items2[0]['ExifData'])
+    items = response['Items']
+    print(items[0])
+    tags=items[0]['Tags'].split(',')
+    exifdata=json.loads(items[0]['ExifData'])
 
     return render_template('photodetail.html', 
-            photo=items2[0], tags=tags, exifdata=exifdata)
+            photo=items[0], tags=tags, exifdata=exifdata)
 
 @app.route('/search', methods=['GET'])
 def search_page():
