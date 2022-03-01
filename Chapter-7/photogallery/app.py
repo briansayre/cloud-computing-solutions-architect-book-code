@@ -113,6 +113,7 @@ def signup():
 
 @app.route('/home', methods=['GET', 'POST'])
 def home_page():
+    # response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
     response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
     items = response['Items']
     print(items)
