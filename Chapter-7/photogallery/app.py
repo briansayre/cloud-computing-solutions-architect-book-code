@@ -110,6 +110,7 @@ def login():
 
 @app.route('/signup', methods=['POST'])
 def signup():
+    ts=time.time()
     username = request.form['username']
     password = request.form['password']
     usertable.put_item(
