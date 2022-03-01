@@ -121,8 +121,8 @@ def home_page():
 
 @app.route('/login', methods=['GET'])
 def login():
-    username = request.form['username']
-    password = request.form['password']
+    username = request.args.get('username')
+    password = request.args.get('password')
     print("u: " + username + "p: " + password)
     response = usertable.scan(
         FilterExpression=Attr('username').eq(str(username))
