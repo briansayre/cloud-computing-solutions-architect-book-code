@@ -100,7 +100,7 @@ def signup():
     username = request.form['username']
     password = request.form['password']
     if (username == "" or password == ""):
-        return redirect(url_for('index'), code=505)
+        return redirect('/')
     usertable.put_item(
             Item={
                     "UserId": str(int(ts*1000)),
@@ -116,7 +116,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         if (username == "" or password == ""):
-            return redirect(url_for('index'), code=505)
+            return redirect('/')
         print("u: " + username + "p: " + password)
         response = usertable.scan(
             FilterExpression=Attr('username').eq(str(username))
@@ -126,15 +126,15 @@ def login():
         if (password == response_password):
             session['user_id'] = items[0]['UserId']
             print("pass=curr " + str(items[0]['UserId']))
-            return redirect(url_for('home_page'), code=200)
-        return redirect(url_for('index'), code=505)
-    return redirect(url_for('index'), code=505)
+            return redirect('/home')
+        return redirect('/')
+    return redirect('/')
 
 @app.route('/logout')
 def logout():
    # remove the username from the session if it is there
    session.pop('user_id', None)
-   return redirect(url_for('index'))
+   return redirect('/')
 
 @app.route('/home', methods=['GET', 'POST'])
 def home_page():
