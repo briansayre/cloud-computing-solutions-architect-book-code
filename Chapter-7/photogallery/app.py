@@ -96,7 +96,6 @@ def s3uploading(filename, filenameWithPath):
 def index():
     return render_template('index.html')
 
-
 @app.route('/signup', methods=['POST'])
 def signup():
     ts=time.time()
@@ -111,20 +110,10 @@ def signup():
             )
     return render_template('index.html')
 
-@app.route('/home', methods=['GET', 'POST'])
-def home_page():
-    # response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
-    response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
-    items = response['Items']
-    print(items)
-    print("USERID: " + str(current_user_id))
-    return render_template('home.html', photos=items)
-
-
-@app.route('/login', methods=['GET'])
+@app.route('/login', methods=['POST'])
 def login():
-    username = request.args.get('username')
-    password = request.args.get('password')
+    username = request.form['username']
+    password = request.form['password']
     print("u: " + username + "p: " + password)
     response = usertable.scan(
         FilterExpression=Attr('username').eq(str(username))
@@ -136,6 +125,16 @@ def login():
         print("pass=curr " + str(items[0]['UserId']))
         return redirect(url_for('home_page'))
     return redirect(url_for('index'))
+
+@app.route('/home', methods=['GET', 'POST'])
+def home_page():
+    # response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
+    response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
+    items = response['Items']
+    print(items)
+    print("USERID: " + str(current_user_id))
+    return render_template('home.html', photos=items)
+
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_photo():
