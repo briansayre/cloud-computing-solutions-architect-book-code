@@ -34,7 +34,7 @@ import exifread
 import json
 
 app = Flask(__name__)
-
+app.secret_key = 'whoop’
 
 UPLOAD_FOLDER = os.path.join(app.root_path,'static/media')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -109,21 +109,29 @@ def signup():
             )
     return render_template('index.html')
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    username = request.form['username']
-    password = request.form['password']
-    print("u: " + username + "p: " + password)
-    response = usertable.scan(
-        FilterExpression=Attr('username').eq(str(username))
-    )
-    items = response['Items']
-    response_password = items[0]['password']
-    if (password == response_password):
-        session['current_user_id'] = items[0]['UserId']
-        print("pass=curr " + str(items[0]['UserId']))
-        return redirect(url_for('home_page'), code=200)
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        print("u: " + username + "p: " + password)
+        response = usertable.scan(
+            FilterExpression=Attr('username').eq(str(username))
+        )
+        items = response['Items']
+        response_password = items[0]['password']
+        if (password == response_password):
+            session['current_user_id'] = items[0]['UserId']
+            print("pass=curr " + str(items[0]['UserId']))
+            return redirect(url_for('home_page'), code=200)
+        return redirect(url_for('index'), code=505)
     return redirect(url_for('index'), code=505)
+
+@app.route('/logout')
+def logout():
+   # remove the username from the session if it is there
+   session.pop('current_user_id', None)
+   return redirect(url_for('index'))
 
 @app.route('/home', methods=['GET', 'POST'])
 def home_page():
