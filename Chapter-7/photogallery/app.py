@@ -134,8 +134,7 @@ def logout():
 
 @app.route('/home', methods=['GET', 'POST'])
 def home_page():
-    # response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
-    response = table.scan(FilterExpression=Attr('UserId').eq(1646174048751))
+    response = table.scan(FilterExpression=Attr('UserID').eq(session["current_user_id"]))
     items = response['Items']
     print(items)
     print("USERID: " + str( session['current_user_id'] ))
