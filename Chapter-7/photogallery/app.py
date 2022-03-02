@@ -205,9 +205,9 @@ def search_page():
     query = request.args.get('query', None)    
     
     response = table.scan(
-        FilterExpression=Attr('Title').contains(str(query)) | 
+        FilterExpression=(Attr('Title').contains(str(query)) | 
                         Attr('Description').contains(str(query)) | 
-                        Attr('Tags').contains(str(query)) & 
+                        Attr('Tags').contains(str(query))) & 
                         Attr('UserID').eq(str(session['user_id']))
     )
     items = response['Items']
