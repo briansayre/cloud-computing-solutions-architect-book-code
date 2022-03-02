@@ -142,11 +142,10 @@ def logout():
 def home_page():
     response = table.scan(FilterExpression=Attr('UserID').eq(session["user_id"]))
     items = response['Items']
-    response = usertable.scan(
+    response2 = usertable.scan(
         FilterExpression=Key('UserId').eq(str(session["user_id"]))
     )
-    items = response['Items']
-    username = items[0]['username']
+    username = response2['Items'][0]['username']
     print(items)
     print("USERID: " + str( session['user_id'] ))
     return render_template('home.html', photos=items, name=username)
