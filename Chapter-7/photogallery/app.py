@@ -123,8 +123,8 @@ def login():
     if (password == response_password):
         current_user_id = items[0]['UserId']
         print("pass=curr " + str(items[0]['UserId']))
-        return redirect(url_for('home_page'))
-    return redirect(url_for('index'))
+        return redirect(url_for('home_page'), code=200)
+    return redirect(url_for('index'), code=505)
 
 @app.route('/home', methods=['GET', 'POST'])
 def home_page():
