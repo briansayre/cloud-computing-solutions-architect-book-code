@@ -34,7 +34,7 @@ import exifread
 import json
 
 app = Flask(__name__)
-app.secret_key = 'whoop’
+app.secret_key = 'whoop'
 
 UPLOAD_FOLDER = os.path.join(app.root_path,'static/media')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
