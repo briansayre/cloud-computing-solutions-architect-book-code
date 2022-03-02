@@ -177,7 +177,7 @@ def add_photo():
                 }
             )
 
-        return redirect('/')
+        return redirect('/home')
     else:
         return render_template('form.html')
 
