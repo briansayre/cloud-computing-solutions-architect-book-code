@@ -120,7 +120,7 @@ def login():
         items = response['Items']
         response_password = items[0]['password']
         if (password == response_password):
-            session['current_user_id'] = items[0]['UserId']
+            session['user_id'] = items[0]['UserId']
             print("pass=curr " + str(items[0]['UserId']))
             return redirect(url_for('home_page'), code=200)
         return redirect(url_for('index'), code=505)
@@ -129,15 +129,15 @@ def login():
 @app.route('/logout')
 def logout():
    # remove the username from the session if it is there
-   session.pop('current_user_id', None)
+   session.pop('user_id', None)
    return redirect(url_for('index'))
 
 @app.route('/home', methods=['GET', 'POST'])
 def home_page():
-    response = table.scan(FilterExpression=Attr('UserID').eq(session["current_user_id"]))
+    response = table.scan(FilterExpression=Attr('UserID').eq(session["user_id"]))
     items = response['Items']
     print(items)
-    print("USERID: " + str( session['current_user_id'] ))
+    print("USERID: " + str( session['user_id'] ))
     return render_template('home.html', photos=items)
 
 
@@ -173,7 +173,7 @@ def add_photo():
                     "Tags": tags,
                     "URL": uploadedFileURL,
                     "ExifData": json.dumps(ExifData),
-                    "UserID": str(session['current_user_id'])
+                    "UserID": str(session['user_id'])
                 }
             )
 
@@ -184,7 +184,7 @@ def add_photo():
 @app.route('/<int:photoID>', methods=['GET'])
 def view_photo(photoID):
     response = table.scan(
-        FilterExpression=Attr('PhotoID').eq(str(photoID)) & Attr('UserId').eq(str(session['current_user_id']))
+        FilterExpression=Attr('PhotoID').eq(str(photoID)) & Attr('UserID').eq(str(session['user_id']))
     )
     items = response['Items']
     print(items[0])
@@ -202,7 +202,7 @@ def search_page():
         FilterExpression=Attr('Title').contains(str(query)) | 
                         Attr('Description').contains(str(query)) | 
                         Attr('Tags').contains(str(query)) & 
-                        Attr('UserId').eq(str(session['current_user_id']))
+                        Attr('UserID').eq(str(session['user_id']))
     )
     items = response['Items']
     return render_template('search.html', 
