@@ -99,7 +99,7 @@ def signup():
     ts=time.time()
     username = request.form['username']
     password = request.form['password']
-    if (username == "" | password == ""):
+    if (username == "" or password == ""):
         return redirect(url_for('index'), code=505)
     usertable.put_item(
             Item={
@@ -115,7 +115,7 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if (username == "" | password == ""):
+        if (username == "" or password == ""):
             return redirect(url_for('index'), code=505)
         print("u: " + username + "p: " + password)
         response = usertable.scan(
