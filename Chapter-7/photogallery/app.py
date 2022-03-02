@@ -51,7 +51,6 @@ table = dynamodb.Table('PhotoGallery')
 
 usertable = dynamodb.Table('PhotoGalleryUsers')
 
-
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -70,10 +69,10 @@ def getExifData(path_name):
     tags = exifread.process_file(f)
     ExifData={}
     for tag in tags.keys():
-        if tag not in ('JPEGThumbnail', 
-                        'TIFFThumbnail', 
-                        'Filename', 
-                        'EXIF MakerNote'):            
+        if tag not in ('JPEGThumbnail',
+                        'TIFFThumbnail',
+                        'Filename',
+                        'EXIF MakerNote'):    
             key="%s"%(tag)
             val="%s"%(tags[tag])
             ExifData[key]=val
@@ -136,7 +135,7 @@ def logout():
 @app.route('/home', methods=['GET', 'POST'])
 def home_page():
     # response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
-    response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
+    response = table.scan(FilterExpression=Attr('UserId').eq(1646174048751)))
     items = response['Items']
     print(items)
     print("USERID: " + str( session['current_user_id'] ))
