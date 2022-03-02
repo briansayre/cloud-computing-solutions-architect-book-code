@@ -131,7 +131,7 @@ def home_page():
     response = table.scan(FilterExpression=Attr('UserId').eq(str(1646174048751)))
     items = response['Items']
     print(items)
-    print("USERID: " + str( session['current_user_id'] )
+    print("USERID: " + str( session['current_user_id'] ))
     return render_template('home.html', photos=items)
 
 
