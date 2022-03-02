@@ -101,14 +101,16 @@ def signup():
     password = request.form['password']
     if (username == "" or password == ""):
         return redirect('/')
+    new_user_id = str(int(ts*1000))
     usertable.put_item(
-            Item={
-                    "UserId": str(int(ts*1000)),
+                Item={
+                    "UserId": new_user_id,
                     "username": username,
                     "password": password
                 }
             )
-    return render_template('index.html')
+    session["user_id"] = new_user_id
+    return redirect('/home')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
