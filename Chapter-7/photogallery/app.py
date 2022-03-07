@@ -38,8 +38,8 @@ app.secret_key = 'whoop'
 
 UPLOAD_FOLDER = os.path.join(app.root_path,'static/media')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
-AWS_ACCESS_KEY="AKIA2TPIYF2FBOX6X4VA"
-AWS_SECRET_KEY="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"
+AWS_ACCESS_KEY="AKIA2TPIYF2FIK7EZE6Z"
+AWS_SECRET_KEY="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"
 REGION="us-east-1"
 BUCKET_NAME="photo-gallery-bucket-gt"
 
